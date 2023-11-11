@@ -6,7 +6,6 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.provider.ContactsContract.CommonDataKinds.Email
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -21,6 +20,7 @@ import com.google.firebase.auth.FirebaseAuth
 
 class Profile : Fragment() {
 
+    private lateinit var customerservice : LinearLayout
     private lateinit var name :  TextView
     private lateinit var city : TextView
     private lateinit var phoneNo : TextView
@@ -43,6 +43,14 @@ class Profile : Fragment() {
         city  = view.findViewById(R.id.pr_txcity)
         phoneNo = view.findViewById(R.id.pr_txNumber)
         email1 = view.findViewById(R.id.pr_txEmail)
+
+        //customer service
+        customerservice = view.findViewById(R.id.Pr_Cs)
+        customerservice.setOnClickListener {
+            val intent =  Intent(requireContext(), CustomerService::class.java)
+            startActivity(intent)
+        }
+
 
         //logout
         logout.setOnClickListener {
