@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,10 +16,13 @@
         android:theme="@style/Theme.Design.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".CustomerService"
+            android:name=".Tracks"
             android:exported="false" />
         <activity
-            android:name=".Customer_Service"
+            android:name=".BookHotels"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerService"
             android:exported="false" />
         <activity
             android:name=".DashBoard"

@@ -1,0 +1,838 @@
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- First CardView -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/placePhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/kedarnath" />
+
+                <TextView
+                    android:id="@+id/placeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="8sp"
+                    android:text="Kedarnath"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/placeDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8sp"
+                    android:paddingBottom="7sp"
+                    android:text="Distance:20Km(Approx)"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/desrp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8sp"
+                    android:paddingBottom="7sp"
+                    android:text="Located in the Himalayas. Famous for the Kedarnath Temple. Altitude: High. Spiritual and picturesque"
+                    android:textAlignment="viewStart"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/getDirectionsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#000000"
+                    android:onClick="onGetDirectionsButtonClick"
+                    android:text="Get Directions"
+                    android:textColor="@android:color/white" />
+
+                <!-- Nearby Amenity Buttons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:onClick="onNearbyHotelsClick"
+                        android:text="Hotels"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7sp"
+                        android:layout_marginRight="7sp"
+                        android:layout_weight="1"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:onClick="onNearbyBanksClick"
+                        android:text="Banks"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:onClick="onNearbyHospitalsClick"
+                        android:text="Hospitals"
+                        android:textColor="@android:color/white" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Repeat the above CardView structure for additional items -->
+
+        <!-- Second CardView -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/placePhoto1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/weastern" />
+
+                <TextView
+                    android:id="@+id/placeName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Weastern Ghats"
+                    android:paddingLeft="8sp"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/placeDistance1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8sp"
+                    android:paddingBottom="7sp"
+                    android:text="Distance:20Km(Approx)"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/desrp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8sp"
+                    android:paddingBottom="7sp"
+                    android:text="These mountains cover an area of around 140,000 km² in a 1,600 km long stretch that is interrupted only by the 30 km Palghat Gap at around 11°N. Older than the great Himalayan mountain chain, the Western Ghats of India are a geomorphic feature of immense global importance."
+                    android:textAlignment="viewStart"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/getDirectionsButton1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Get Directions"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@android:color/white"
+                    android:onClick="onGetDirectionsButtonClick"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hotels"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:textColor="@android:color/white"
+                        android:onClick="onNearbyHotelsClick"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7sp"
+                        android:layout_marginRight="7sp"
+                        android:layout_weight="1"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:onClick="onNearbyBanksClick"
+                        android:text="Banks"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hospitals"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:textColor="@android:color/white"
+                        android:onClick="onNearbyHospitalsClick"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Third CardView -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/placePhoto2"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/esatern" />
+
+                <TextView
+                    android:id="@+id/placeName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="8sp"
+                    android:text="Esatern Ghats"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/placeDistance2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8sp"
+                    android:paddingBottom="7sp"
+                    android:text="Distance:20Km(Approx)"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/desrp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8sp"
+                    android:paddingBottom="7sp"
+                    android:text="The Eastern Ghats run from northern Odisha through Andhra Pradesh to Tamil Nadu in the south passing some parts of Karnataka. They are eroded and cut through by the four major rivers of peninsular India, known as the Godavari, Mahanadi, Krishna, and Kaveri."
+                    android:textAlignment="viewStart"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/getDirectionsButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Get Directions"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@android:color/white"
+                    android:onClick="onGetDirectionsButtonClick"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:text="Hotels"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:textColor="@android:color/white"
+                        android:onClick="onNearbyHotelsClick"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7sp"
+                        android:layout_marginRight="7sp"
+                        android:layout_weight="1"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:onClick="onNearbyBanksClick"
+                        android:text="Banks"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hospitals"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:textColor="@android:color/white"
+                        android:onClick="onNearbyHospitalsClick"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Fourth CardView -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardElevation="5dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/placePhoto3"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/garhwal" />
+
+                <TextView
+                    android:id="@+id/placeName3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="8sp"
+                    android:text="Garhwal"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/placeDistance3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8sp"
+                    android:paddingBottom="7sp"
+                    android:text="Distance:20Km(Approx)"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/desrp3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8sp"
+                    android:paddingBottom="7sp"
+                    android:text="The district of Tehri Garhwal is famous for Tehri Dam which is one of the largest dams in the world. Apart from this, there are some other attractions in the district which capture the sight of the tourists are Chamba, Dhanaulti, Devprayag, Kanatal, Chandrabadani Devi, and Khatling Glacier."
+                    android:textAlignment="viewStart"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/getDirectionsButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Get Directions"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@android:color/white"
+                    android:onClick="onGetDirectionsButtonClick"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hotels"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:textColor="@android:color/white"
+                        android:onClick="onNearbyHotelsClick"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7sp"
+                        android:layout_marginRight="7sp"
+                        android:layout_weight="1"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:onClick="onNearbyBanksClick"
+                        android:text="Banks"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hospitals"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:textColor="@android:color/white"
+                        android:onClick="onNearbyHospitalsClick"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Fifth CardView -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/placePhoto4"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/kumaon" />
+
+                <TextView
+                    android:id="@+id/placeName4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="8sp"
+                    android:text="Kumaon"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/placeDistance4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8sp"
+                    android:paddingBottom="7sp"
+                    android:text="Distance:20Km(Approx)"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/desrp4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8sp"
+                    android:paddingBottom="7sp"
+                    android:text="Kumaon consists primarily of steep Himalayan foothills, covered in pine tree forests and has a population density of just 170 per square km. In fact, 75% of Kumaon's population is located in urban areas."
+                    android:textAlignment="viewStart"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/getDirectionsButton4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Get Directions"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@android:color/white"
+                    android:onClick="onGetDirectionsButtonClick"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hotels"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:textColor="@android:color/white"
+                        android:onClick="onNearbyHotelsClick"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7sp"
+                        android:layout_marginRight="7sp"
+                        android:layout_weight="1"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:onClick="onNearbyBanksClick"
+                        android:text="Banks"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hospitals"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:textColor="@android:color/white"
+                        android:onClick="onNearbyHospitalsClick"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/placePhoto6"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/guru" />
+
+                <TextView
+                    android:id="@+id/placeName6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="8sp"
+                    android:text="Guru Shikhar"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/placeDistance6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8sp"
+                    android:paddingBottom="7sp"
+                    android:text="Distance:20Km(Approx)"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/desrp6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8sp"
+                    android:paddingBottom="7sp"
+                    android:text="Guru Shikhar, a peak in the Arbuda Mountains of Sirohi district in Rajasthan, is the highest point of the Aravalli Range, Rajasthan, and Western India. It rises to an elevation of 1,722 metres (5,650 ft)."
+                    android:textAlignment="viewStart"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/getDirectionsButton6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Get Directions"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@android:color/white"
+                    android:onClick="onGetDirectionsButtonClick"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hotels"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:textColor="@android:color/white"
+                        android:onClick="onNearbyHotelsClick"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7sp"
+                        android:layout_marginRight="7sp"
+                        android:layout_weight="1"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:onClick="onNearbyBanksClick"
+                        android:text="Banks"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hospitals"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:textColor="@android:color/white"
+                        android:onClick="onNearbyHospitalsClick"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/placePhoto7"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/satpurahill" />
+
+                <TextView
+                    android:id="@+id/placeName7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="8sp"
+                    android:text="Satpura Hill"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/placeDistance7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8sp"
+                    android:paddingBottom="7sp"
+                    android:text="Distance:20Km(Approx)"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/desrp7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8sp"
+                    android:paddingBottom="7sp"
+                    android:text="Satpura National Park, and along with the adjoining Bori and Panchmarhi Sanctuaries, provides 1,427 km2 (551 sq mi) of unique central Indian highland ecosystem. The terrain of the national park is extremely rugged and consists of sandstone peaks, narrow gorges, ravines and dense forests."
+                    android:textAlignment="viewStart"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/getDirectionsButton7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Get Directions"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@android:color/white"
+                    android:onClick="onGetDirectionsButtonClick"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hotels"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:textColor="@android:color/white"
+                        android:onClick="onNearbyHotelsClick"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7sp"
+                        android:layout_marginRight="7sp"
+                        android:layout_weight="1"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:onClick="onNearbyBanksClick"
+                        android:text="Banks"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hospitals"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:textColor="@android:color/white"
+                        android:onClick="onNearbyHospitalsClick"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/placePhoto5"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/vindhya" />
+
+                <TextView
+                    android:id="@+id/placeName5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="8sp"
+                    android:text="Vindhya"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/placeDistance5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8sp"
+                    android:paddingBottom="7sp"
+                    android:text="Distance:20Km(Approx)"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/desrp5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8sp"
+                    android:paddingBottom="7sp"
+                    android:text="Guru Shikhar, a peak in the Arbuda Mountains of Sirohi district in Rajasthan, is the highest point of the Aravalli Range, Rajasthan, and Western India. It rises to an elevation of 1,722 metres (5,650 ft)."
+                    android:textAlignment="viewStart"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/getDirectionsButton5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Get Directions"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@android:color/white"
+                    android:onClick="onGetDirectionsButtonClick"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hotels"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:textColor="@android:color/white"
+                        android:onClick="onNearbyHotelsClick"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7sp"
+                        android:layout_marginRight="7sp"
+                        android:layout_weight="1"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:onClick="onNearbyBanksClick"
+                        android:text="Banks"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hospitals"
+                        android:backgroundTint="?attr/colorAccent"
+                        android:textColor="@android:color/white"
+                        android:onClick="onNearbyHospitalsClick"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>
+
