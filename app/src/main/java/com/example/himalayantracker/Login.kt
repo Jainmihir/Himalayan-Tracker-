@@ -9,7 +9,9 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.constraintlayout.widget.StateSet.TAG
 import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
@@ -77,7 +79,7 @@ class Login : AppCompatActivity() {
         client = GoogleSignIn.getClient(this,options)
         btemail.setOnClickListener {
             val intent = client.signInIntent
-            startActivityForResult(intent,10001)
+            startActivity(intent)
         }
 
 
@@ -164,7 +166,7 @@ class Login : AppCompatActivity() {
     // email Authentication code
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(requestCode==10001){
+        if(requestCode==1000){
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
             val account = task.getResult(ApiException::class.java)
             val credential = GoogleAuthProvider.getCredential(account.idToken,null)

@@ -11,7 +11,9 @@
         android:id="@+id/pr_top_view"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@drawable/bg_view" />
+        android:background="@drawable/bg_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/pr_txName"
         android:layout_width="wrap_content"
@@ -19,10 +21,13 @@
         android:text="FULL_NAME"
         android:textStyle="bold"
         android:textColor="#DAD3D3"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:textSize="20dp"
-        />
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pr_top_view"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+
     <TextView
         android:id="@+id/pr_txcity"
         android:layout_width="wrap_content"
@@ -34,6 +39,7 @@
         android:layout_marginTop="45dp"
         android:textSize="20dp"
         />
+
     <TextView
         android:id="@+id/pr_txNumber"
         android:layout_width="wrap_content"
@@ -81,6 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
+                android:id="@+id/pr_updateProfile"
                 android:background="@drawable/top_back_color"
                 android:elevation="5dp"
                 android:orientation="vertical">
@@ -112,6 +119,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/pr_offers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -189,6 +197,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:id="@+id/pr_notification"
                 android:layout_weight="1"
                 android:background="@drawable/top_back_color"
                 android:elevation="5dp"
@@ -226,6 +235,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/top_back_color"
                 android:elevation="5dp"
+                android:id="@+id/pr_settings"
                 android:orientation="vertical">
 
                 <ImageView

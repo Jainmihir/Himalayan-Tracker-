@@ -6,7 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".CustomerService">
 
+    <!-- Divider to separate messages from input bar -->
+    <View
+        android:id="@+id/dark_divider"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#42A5F5"
+        android:layout_alignParentTop="true"/>
 
+    <!-- RecyclerView to display messages -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_messages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_layout_bar"
+        android:layout_below="@id/dark_divider"
+        tools:itemCount="20"
+        tools:listitem="@layout/message_item" />
+
+    <!-- Input bar -->
     <LinearLayout
         android:id="@+id/ll_layout_bar"
         android:layout_width="match_parent"
@@ -15,47 +33,38 @@
         android:background="#E4E4E4"
         android:orientation="horizontal">
 
+        <!-- EditText for typing messages -->
         <EditText
             android:id="@+id/et_message"
-            android:inputType="textShortMessage"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="15dp"
             android:textColor="@color/black"
-            android:layout_weight=".5"
-            android:background="@drawable/bt_round"
-            android:textColorHint="@color/black"
-            android:backgroundTint="@android:color/white"
             android:hint="Type a message..."
-            android:padding="20dp"
-            android:singleLine="true" />
+            android:textColorHint="#757575"
+            android:inputType="textShortMessage"/>
 
+        <!-- Send Button -->
         <Button
             android:id="@+id/btn_send"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/bt_round"
-            android:backgroundTint="#26A69A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
             android:text="Send"
-            android:textColor="@android:color/white" />
+            android:textColor="@color/black"
+            android:background="@drawable/bt_round"
+            android:gravity="center"/>
 
     </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_messages"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/ll_layout_bar"
-        android:layout_below="@+id/dark_divider"
-        tools:itemCount="20"
-        tools:listitem="@layout/message_item" />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="#42A5F5"
-        android:id="@+id/dark_divider"/>
-
 
 </RelativeLayout>

@@ -14,11 +14,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "624051367109-5m985g2fv1ngobmd9dt2kv2885hu41en.apps.googleusercontent.com",
+          "client_id": "624051367109-g0g22u6am5vov5636tib70476eqqbuav.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.himalayantracker",
-            "certificate_hash": "c810bbbd2a18d1e9f0d2f570e16b835e753ea1fa"
+            "certificate_hash": "ce732062009ed1f582ddbf7e8b3b5d88d56075ad"
           }
         },
         {

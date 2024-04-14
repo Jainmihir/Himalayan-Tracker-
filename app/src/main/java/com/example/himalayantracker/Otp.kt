@@ -176,6 +176,7 @@ class Otp : AppCompatActivity() {
 
     private fun sendToMain(){
         startActivity(Intent(this,Register::class.java))
+        finish()
     }
 
 
@@ -220,7 +221,7 @@ class Otp : AppCompatActivity() {
                 R.id.otpEditText3 -> if(text.length == 1) inputOTP4.requestFocus() else if(text.isEmpty()) inputOTP2.requestFocus()
                 R.id.otpEditText4 -> if(text.length == 1) inputOTP5.requestFocus() else if(text.isEmpty()) inputOTP3.requestFocus()
                 R.id.otpEditText5 -> if(text.length == 1) inputOTP6.requestFocus() else if(text.isEmpty()) inputOTP4.requestFocus()
-                R.id.otpEditText6 -> if(text.isEmpty()) inputOTP5.requestFocus()
+                R.id.otpEditText6 -> if(text.isEmpty()) inputOTP1.requestFocus()
             }
         }
     }

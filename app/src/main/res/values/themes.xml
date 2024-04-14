@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.HimalayanTracker" parent="Base.Theme.HimalayanTracker" />
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight">
+        <!-- Customize your theme here. -->
+        <!-- Other theme attributes -->
+    </style>
 </resources>
