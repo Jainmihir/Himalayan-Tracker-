@@ -1,4 +1,4 @@
-## Himalayan Tracker Android Application :
+# Himalayan Tracker Android Application :
 - This project is the Android app for the conference. The app supports devices running Android 5.0+, and is optimized for phones and tablets of all shapes and sizes.
 
 # Problem :
@@ -41,4 +41,6 @@
 - Path : Select -> Project/Final Year Project PPT - Himalayan Tracker.pdf
 
 # Project Report :
-- 
+- Path : Select -> Project/Project-Report.zip
+
+# Thank You 
