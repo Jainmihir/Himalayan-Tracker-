@@ -1,3 +1,4 @@
-/build
-/google-services.json
-/src/main/values
+build
+src/main/values
+
+google-services.json

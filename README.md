@@ -31,8 +31,14 @@
 
 # To Download : 
 - Refer File App-debug.apk - Only For Android.
+- Path : Select -> Project/App-debug.apk
 
 # How to clone this Application :
 - git clone https://github.com/Jainmihir/Himalayan-Tracker-.git
-- Setup Gradle Files with Firebase Authencation (OTP,Google) or Razor Pay API's.
+- Setup Gradle Files with Firebase Authentication (OTP,Google) or Razor Pay API's.
 
+# To Download PPT :
+- Path : Select -> Project/Final Year Project PPT - Himalayan Tracker.pdf
+
+# Project Report :
+- 
