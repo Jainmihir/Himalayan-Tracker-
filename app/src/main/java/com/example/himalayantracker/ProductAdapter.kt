@@ -52,7 +52,7 @@ class ProductAdapter(val context : Activity , val productArrayList : List<Hotel>
         // payment gateway
         holder.btnBook.setOnClickListener{
             val co = Checkout()
-            co.setKeyID("@string/razorpay")
+            co.setKeyID("rzp_test_JIt75TRR2khxQv")
             val options = JSONObject()
             try {
                 options.put("name", "Himalyan-Tracker")

@@ -30,7 +30,7 @@ class HotelsList : AppCompatActivity() , PaymentResultWithDataListener {
 
         Checkout.preload(applicationContext)
         val co = Checkout()
-        co.setKeyID("@string/razorpay")
+        co.setKeyID("rzp_test_JIt75TRR2khxQv")
 //        Checkout.sdkCheckIntegration(this@HotelsList)
 
 

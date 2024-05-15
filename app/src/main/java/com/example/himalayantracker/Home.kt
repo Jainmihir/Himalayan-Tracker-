@@ -53,14 +53,12 @@ class Home : Fragment() {
         booking = view.findViewById(R.id.book_details)
         booking.setOnClickListener {
 
-            val paymentId = "123456" // Example paymentId for testing
-            val email = "example@email.com" // Example email for testing
-            val phone = "+1234567890"
+
 //
             val editor = sharedPreferences.edit()
-            editor.putString("paymentId", paymentId)
-            editor.putString("email", email)
-            editor.putString("phone", phone)
+            editor.putString("paymentId", "")
+            editor.putString("email", "")
+            editor.putString("phone", "")
             editor.apply()
 //            val paymentId = sharedPreferences.getString("paymentId", "")
 //            val email = sharedPreferences.getString("email", "")
@@ -70,9 +68,9 @@ class Home : Fragment() {
 
             // For example, start BookingDetails activity with the retrieved data
             val intent = Intent(requireContext(), BookingDetails::class.java)
-            intent.putExtra("paymentId", paymentId)
-            intent.putExtra("email", email)
-            intent.putExtra("phone", phone)
+            intent.putExtra("paymentId", "")
+            intent.putExtra("email", "")
+            intent.putExtra("phone", "")
             startActivity(intent)
 
 
